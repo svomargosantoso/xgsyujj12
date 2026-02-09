@@ -139,7 +139,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section - Eye Catching */}
-      <section id="beranda" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="beranda" className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -151,11 +151,11 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           {/* Promo Badge */}
-          <Badge className="mb-6 bg-red-600 text-white px-6 py-2 text-lg animate-pulse">
+          <Badge className="mb-4 md:mb-6 bg-red-600 text-white px-4 md:px-6 py-1.5 md:py-2 text-sm md:text-lg animate-pulse">
             🔥 PROMO TERBATAS HARI INI!
           </Badge>
 
-          <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-7xl font-black mb-4 md:mb-6 leading-tight px-2">
             <span className="bg-gradient-to-r from-red-500 via-orange-500 to-red-500 bg-clip-text text-transparent">
               TINGKATKAN STAMINA
             </span>
@@ -165,67 +165,67 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-300 max-w-3xl mx-auto px-4">
             Kopi Premium Khusus Pria Dewasa dengan Formula Alami
             <br />
-            <span className="text-red-500 font-bold">✓ BPOM ✓ HALAL MUI ✓ 100% AMAN</span>
+            <span className="text-red-500 font-bold text-sm md:text-base">✓ BPOM ✓ HALAL MUI ✓ 100% AMAN</span>
           </p>
 
           {/* Countdown Timer */}
-          <div className="mb-8 inline-block">
-            <div className="bg-black/50 backdrop-blur-sm border-2 border-red-500 rounded-2xl p-6">
-              <p className="text-sm text-gray-300 mb-3">PROMO BERAKHIR DALAM:</p>
-              <div className="flex gap-4 justify-center">
+          <div className="mb-6 md:mb-8 inline-block">
+            <div className="bg-black/50 backdrop-blur-sm border-2 border-red-500 rounded-xl md:rounded-2xl p-4 md:p-6">
+              <p className="text-xs md:text-sm text-gray-300 mb-2 md:mb-3">PROMO BERAKHIR DALAM:</p>
+              <div className="flex gap-2 md:gap-4 justify-center">
                 <div className="text-center">
-                  <div className="bg-red-600 rounded-lg px-4 py-3 min-w-[70px]">
-                    <div className="text-3xl font-bold">{String(timeLeft.hours).padStart(2, '0')}</div>
+                  <div className="bg-red-600 rounded-lg px-2 md:px-4 py-2 md:py-3 min-w-[50px] md:min-w-[70px]">
+                    <div className="text-xl md:text-3xl font-bold">{String(timeLeft.hours).padStart(2, '0')}</div>
                   </div>
-                  <div className="text-xs mt-2 text-gray-400">JAM</div>
+                  <div className="text-xs mt-1 md:mt-2 text-gray-400">JAM</div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-red-600 rounded-lg px-4 py-3 min-w-[70px]">
-                    <div className="text-3xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</div>
+                  <div className="bg-red-600 rounded-lg px-2 md:px-4 py-2 md:py-3 min-w-[50px] md:min-w-[70px]">
+                    <div className="text-xl md:text-3xl font-bold">{String(timeLeft.minutes).padStart(2, '0')}</div>
                   </div>
-                  <div className="text-xs mt-2 text-gray-400">MENIT</div>
+                  <div className="text-xs mt-1 md:mt-2 text-gray-400">MENIT</div>
                 </div>
                 <div className="text-center">
-                  <div className="bg-red-600 rounded-lg px-4 py-3 min-w-[70px]">
-                    <div className="text-3xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</div>
+                  <div className="bg-red-600 rounded-lg px-2 md:px-4 py-2 md:py-3 min-w-[50px] md:min-w-[70px]">
+                    <div className="text-xl md:text-3xl font-bold">{String(timeLeft.seconds).padStart(2, '0')}</div>
                   </div>
-                  <div className="text-xs mt-2 text-gray-400">DETIK</div>
+                  <div className="text-xs mt-1 md:mt-2 text-gray-400">DETIK</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
               onClick={() => window.open(whatsappUrl, '_blank')}
               size="lg"
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-12 py-6 text-xl rounded-full shadow-2xl shadow-red-500/50 transform hover:scale-105 transition-all"
+              className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-red-500/50 transform hover:scale-105 transition-all"
             >
-              <MessageCircle className="mr-3 h-6 w-6" />
-              PESAN SEKARANG - DISKON 30%
+              <MessageCircle className="mr-2 md:mr-3 h-5 md:h-6 w-5 md:w-6" />
+              CLAIM VOUCHER FREE ONGKIR
             </Button>
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-green-500" />
+          <div className="flex flex-wrap justify-center gap-3 md:gap-6 text-xs md:text-sm px-4">
+            <div className="flex items-center gap-1 md:gap-2">
+              <Shield className="h-4 md:h-5 w-4 md:w-5 text-green-500" />
               <span>Sertifikat BPOM</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Award className="h-5 w-5 text-green-500" />
+            <div className="flex items-center gap-1 md:gap-2">
+              <Award className="h-4 md:h-5 w-4 md:w-5 text-green-500" />
               <span>Halal MUI</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-5 w-5 text-green-500" />
+            <div className="flex items-center gap-1 md:gap-2">
+              <CheckCircle2 className="h-4 md:h-5 w-4 md:w-5 text-green-500" />
               <span>100% Original</span>
             </div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5 text-green-500" />
+            <div className="flex items-center gap-1 md:gap-2">
+              <TrendingUp className="h-4 md:h-5 w-4 md:w-5 text-green-500" />
               <span>10.000+ Pria Puas</span>
             </div>
           </div>
@@ -233,44 +233,44 @@ export default function Home() {
       </section>
 
       {/* Product Section with Pricing */}
-      <section id="produk" className="py-20 bg-zinc-900">
+      <section id="produk" className="py-12 md:py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-red-600 text-white px-4 py-2">PAKET HEMAT</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <Badge className="mb-4 bg-red-600 text-white px-4 py-2 text-sm md:text-base">PAKET HEMAT</Badge>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
               Pilih Paket <span className="text-red-500">Terbaik</span> Anda
             </h2>
-            <p className="text-gray-400 text-lg">Semakin banyak, semakin hemat!</p>
+            <p className="text-gray-400 text-base md:text-lg">Semakin banyak, semakin hemat!</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
             {/* Paket 1 Box */}
             <Card className="bg-zinc-800 border-zinc-700 hover:border-red-500 transition-all transform hover:scale-105">
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="text-center mb-6">
                   <img 
                     src="/coffiy-box.png" 
                     alt="Coffiy 1 Box" 
-                    className="w-48 h-48 object-contain mx-auto mb-4"
+                    className="w-32 h-32 md:w-48 md:h-48 object-contain mx-auto mb-4"
                   />
-                  <h3 className="text-2xl font-bold mb-2">Paket 1 Box</h3>
-                  <p className="text-gray-400 mb-4">10 Sachet Premium</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">Paket 1 Box</h3>
+                  <p className="text-gray-400 mb-4 text-sm md:text-base">10 Sachet Premium</p>
                   
                   <div className="mb-4">
-                    <span className="text-gray-400 line-through text-xl">Rp 250.000</span>
-                    <div className="text-4xl font-bold text-red-500 mt-2">Rp 175.000</div>
-                    <Badge className="mt-2 bg-green-600">HEMAT 30%</Badge>
+                    <Badge className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg animate-pulse">
+                      🎁 CLAIM VOUCHER FREE ONGKIR
+                    </Badge>
                   </div>
                 </div>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-3 mb-6 text-sm md:text-base">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span>10 Sachet @ 20g</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span>Gratis Ongkir Seluruh Indonesia</span>
+                    <span className="font-bold text-green-500">Claim Voucher Free Ongkir Sekarang!</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -280,9 +280,9 @@ export default function Home() {
 
                 <Button 
                   onClick={() => window.open(whatsappUrl, '_blank')}
-                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-full"
+                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 md:py-4 rounded-full text-sm md:text-base"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <MessageCircle className="mr-2 h-4 md:h-5 w-4 md:w-5" />
                   PESAN 1 BOX
                 </Button>
               </CardContent>
@@ -291,33 +291,33 @@ export default function Home() {
             {/* Paket 5 Sachet - BEST SELLER */}
             <Card className="bg-gradient-to-br from-red-900/30 to-orange-900/30 border-2 border-red-500 relative overflow-hidden">
               <div className="absolute top-4 right-4">
-                <Badge className="bg-yellow-500 text-black font-bold">⭐ TERLARIS</Badge>
+                <Badge className="bg-yellow-500 text-black font-bold text-xs md:text-sm">⭐ TERLARIS</Badge>
               </div>
-              <CardContent className="p-8">
+              <CardContent className="p-6 md:p-8">
                 <div className="text-center mb-6">
                   <img 
                     src="/coffiy-5s.png" 
                     alt="Coffiy 5 Sachet" 
-                    className="w-48 h-48 object-contain mx-auto mb-4"
+                    className="w-32 h-32 md:w-48 md:h-48 object-contain mx-auto mb-4"
                   />
-                  <h3 className="text-2xl font-bold mb-2">Paket 5 Sachet</h3>
-                  <p className="text-gray-400 mb-4">Cocok untuk Pemula</p>
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">Paket 5 Sachet</h3>
+                  <p className="text-gray-400 mb-4 text-sm md:text-base">Cocok untuk Pemula</p>
                   
                   <div className="mb-4">
-                    <span className="text-gray-400 line-through text-xl">Rp 150.000</span>
-                    <div className="text-4xl font-bold text-red-500 mt-2">Rp 99.000</div>
-                    <Badge className="mt-2 bg-green-600">HEMAT 34%</Badge>
+                    <Badge className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg animate-pulse">
+                      🎁 CLAIM VOUCHER FREE ONGKIR
+                    </Badge>
                   </div>
                 </div>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="space-y-3 mb-6 text-sm md:text-base">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span>5 Sachet @ 20g</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span>Gratis Ongkir Seluruh Indonesia</span>
+                    <span className="font-bold text-green-500">Claim Voucher Free Ongkir Sekarang!</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -331,9 +331,9 @@ export default function Home() {
 
                 <Button 
                   onClick={() => window.open(whatsappUrl, '_blank')}
-                  className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-4 rounded-full shadow-lg shadow-yellow-500/50"
+                  className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-3 md:py-4 rounded-full shadow-lg shadow-yellow-500/50 text-sm md:text-base"
                 >
-                  <MessageCircle className="mr-2 h-5 w-5" />
+                  <MessageCircle className="mr-2 h-4 md:h-5 w-4 md:w-5" />
                   PESAN 5 SACHET
                 </Button>
               </CardContent>
@@ -341,8 +341,8 @@ export default function Home() {
           </div>
 
           {/* Urgency Text */}
-          <div className="text-center mt-12">
-            <p className="text-red-500 font-bold text-lg animate-pulse">
+          <div className="text-center mt-8 md:mt-12 px-4">
+            <p className="text-red-500 font-bold text-sm md:text-lg animate-pulse">
               ⚠️ STOK TERBATAS! Hanya tersisa 47 paket untuk hari ini
             </p>
           </div>
@@ -350,42 +350,42 @@ export default function Home() {
       </section>
 
       {/* Benefits Section - More Visual */}
-      <section id="manfaat" className="py-20 bg-black">
+      <section id="manfaat" className="py-12 md:py-20 bg-black">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
               Manfaat <span className="text-red-500">Luar Biasa</span>
             </h2>
-            <p className="text-gray-400 text-lg">Rasakan perubahan nyata dalam 7 hari!</p>
+            <p className="text-gray-400 text-base md:text-lg">Rasakan perubahan nyata dalam 7 hari!</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-zinc-900 border-zinc-800 hover:border-red-500 transition-all text-center p-8">
-              <div className="bg-red-600/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="h-10 w-10 text-red-500" />
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            <Card className="bg-zinc-900 border-zinc-800 hover:border-red-500 transition-all text-center p-6 md:p-8">
+              <div className="bg-red-600/20 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <Zap className="h-8 w-8 md:h-10 md:w-10 text-red-500" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Energi Maksimal</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Energi Maksimal</h3>
+              <p className="text-gray-400 text-sm md:text-base">
                 Tingkatkan stamina dan energi sepanjang hari tanpa efek samping
               </p>
             </Card>
 
-            <Card className="bg-zinc-900 border-zinc-800 hover:border-red-500 transition-all text-center p-8">
-              <div className="bg-red-600/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="h-10 w-10 text-red-500" />
+            <Card className="bg-zinc-900 border-zinc-800 hover:border-red-500 transition-all text-center p-6 md:p-8">
+              <div className="bg-red-600/20 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <Heart className="h-8 w-8 md:h-10 md:w-10 text-red-500" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Vitalitas Pria</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Vitalitas Pria</h3>
+              <p className="text-gray-400 text-sm md:text-base">
                 Formula khusus untuk meningkatkan vitalitas dan performa pria dewasa
               </p>
             </Card>
 
-            <Card className="bg-zinc-900 border-zinc-800 hover:border-red-500 transition-all text-center p-8">
-              <div className="bg-red-600/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="h-10 w-10 text-red-500" />
+            <Card className="bg-zinc-900 border-zinc-800 hover:border-red-500 transition-all text-center p-6 md:p-8">
+              <div className="bg-red-600/20 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                <TrendingUp className="h-8 w-8 md:h-10 md:w-10 text-red-500" />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Performa Optimal</h3>
-              <p className="text-gray-400">
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Performa Optimal</h3>
+              <p className="text-gray-400 text-sm md:text-base">
                 Raih performa terbaik dalam aktivitas sehari-hari dan olahraga
               </p>
             </Card>
@@ -394,39 +394,63 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimoni" className="py-20 bg-zinc-900">
+      <section id="testimoni" className="py-12 md:py-20 bg-zinc-900">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
               Apa Kata <span className="text-red-500">Mereka?</span>
             </h2>
-            <p className="text-gray-400 text-lg">10.000+ Pria Indonesia Sudah Merasakan Manfaatnya</p>
+            <p className="text-gray-400 text-base md:text-lg">10.000+ Pria Indonesia Sudah Merasakan Manfaatnya</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="bg-zinc-800 border-zinc-700">
-                <CardContent className="p-6">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 fill-yellow-500 text-yellow-500" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    "Coffiy benar-benar mengubah hidup saya! Stamina meningkat drastis dan saya merasa lebih percaya diri. Highly recommended!"
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center font-bold">
-                      A{i}
-                    </div>
-                    <div>
-                      <div className="font-bold">Ahmad S.</div>
-                      <div className="text-sm text-gray-400">Jakarta</div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {/* Testimoni 1 */}
+            <Card className="bg-zinc-800 border-zinc-700 overflow-hidden">
+              <CardContent className="p-0">
+                <img 
+                  src="/testimoni-coffiy-kopi-stamina-pria-1.jpeg" 
+                  alt="Testimoni Coffiy - Kopi Stamina Pria 1" 
+                  className="w-full h-auto object-cover"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Testimoni 2 */}
+            <Card className="bg-zinc-800 border-zinc-700 overflow-hidden">
+              <CardContent className="p-0">
+                <img 
+                  src="/testimoni-coffiy-kopi-stamina-pria-2.jpeg" 
+                  alt="Testimoni Coffiy - Kopi Stamina Pria 2" 
+                  className="w-full h-auto object-cover"
+                />
+              </CardContent>
+            </Card>
+
+            {/* Testimoni 3 */}
+            <Card className="bg-zinc-800 border-zinc-700 overflow-hidden">
+              <CardContent className="p-0">
+                <img 
+                  src="/testimoni-coffiy-kopi-stamina-pria-3.jpeg" 
+                  alt="Testimoni Coffiy - Kopi Stamina Pria 3" 
+                  className="w-full h-auto object-cover"
+                />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* CTA after testimonials */}
+          <div className="text-center mt-12">
+            <p className="text-gray-300 mb-6 text-base md:text-lg">
+              Bergabunglah dengan ribuan pria Indonesia yang sudah merasakan manfaatnya!
+            </p>
+            <Button 
+              onClick={() => window.open(whatsappUrl, '_blank')}
+              size="lg"
+              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-red-500/50"
+            >
+              <MessageCircle className="mr-2 md:mr-3 h-5 md:h-6 w-5 md:w-6" />
+              CLAIM VOUCHER FREE ONGKIR
+            </Button>
           </div>
         </div>
       </section>
@@ -480,7 +504,7 @@ export default function Home() {
             Siap Tingkatkan Stamina Anda?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Jangan lewatkan promo spesial hari ini! Dapatkan diskon hingga 30% + Gratis Ongkir
+            Jangan lewatkan promo spesial hari ini! Claim voucher free ongkir sekarang juga
           </p>
           
           <Button 
@@ -523,7 +547,7 @@ export default function Home() {
           className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-full shadow-2xl shadow-red-500/50 animate-pulse"
         >
           <MessageCircle className="mr-2 h-5 w-5" />
-          PESAN SEKARANG - DISKON 30%
+          CLAIM VOUCHER FREE ONGKIR
         </Button>
       </div>
     </div>
