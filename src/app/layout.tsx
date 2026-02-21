@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Coffiy - Kopi Stamina Pria Dewasa",
     description: "Kopi stamina pria dewasa premium untuk penambah energi dan vitalitas pria modern. Coffee for men terbaik di Indonesia.",
-    url: "https://coffiy.com",
+    url: "https://coffiystaminapria.vercel.app",
     siteName: "Coffiy",
     type: "website",
   },
@@ -44,6 +44,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coffiy - Kopi Stamina Pria",
     description: "Kopi stamina pria dewasa premium untuk penambah energi dan vitalitas pria modern.",
+  },
+  verification: {
+    google: "Kyjqd8uuhSZ_zayD23V3V0p8GG_YO30biC0",
   },
 };
 
