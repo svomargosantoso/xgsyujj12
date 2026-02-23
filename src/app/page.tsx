@@ -18,6 +18,13 @@ import {
   X
 } from "lucide-react";
 
+// Declare fbq type for TypeScript
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
@@ -25,6 +32,23 @@ export default function Home() {
     minutes: 0,
     seconds: 0
   });
+
+  // Track button click with Meta Pixel
+  const trackButtonClick = (buttonName: string) => {
+    // Track with Meta Pixel
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Contact', {
+        content_name: buttonName,
+        content_category: 'CTA Button'
+      });
+    }
+  };
+
+  // Handle WhatsApp click with tracking
+  const handleWhatsAppClick = (buttonLocation: string) => {
+    trackButtonClick(`WhatsApp CTA - ${buttonLocation}`);
+    window.open(whatsappUrl, '_blank');
+  };
 
   // Calculate time until midnight
   const calculateTimeLeft = () => {
@@ -89,7 +113,7 @@ export default function Home() {
               <a href="#manfaat" className="hover:text-red-500 transition-colors">Manfaat</a>
               <a href="#testimoni" className="hover:text-red-500 transition-colors">Testimoni</a>
               <Button 
-                onClick={() => window.open(whatsappUrl, '_blank')}
+                onClick={() => handleWhatsAppClick('Header Desktop')}
                 className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-6 py-2 rounded-full shadow-lg shadow-red-500/50"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -138,7 +162,7 @@ export default function Home() {
                 Testimoni
               </a>
               <Button 
-                onClick={() => window.open(whatsappUrl, '_blank')}
+                onClick={() => handleWhatsAppClick('Header Mobile')}
                 className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 rounded-full"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
@@ -212,7 +236,7 @@ export default function Home() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6 md:mb-8 px-4">
             <Button 
-              onClick={() => window.open(whatsappUrl, '_blank')}
+              onClick={() => handleWhatsAppClick('Hero Section')}
               size="lg"
               className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-red-500/50 transform hover:scale-105 transition-all"
             >
@@ -290,7 +314,7 @@ export default function Home() {
                 </ul>
 
                 <Button 
-                  onClick={() => window.open(whatsappUrl, '_blank')}
+                  onClick={() => handleWhatsAppClick('Product - 1 Box')}
                   className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 md:py-4 rounded-full text-sm md:text-base"
                 >
                   <MessageCircle className="mr-2 h-4 md:h-5 w-4 md:w-5" />
@@ -341,7 +365,7 @@ export default function Home() {
                 </ul>
 
                 <Button 
-                  onClick={() => window.open(whatsappUrl, '_blank')}
+                  onClick={() => handleWhatsAppClick('Product - 5 Sachet')}
                   className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-3 md:py-4 rounded-full shadow-lg shadow-yellow-500/50 text-sm md:text-base"
                 >
                   <MessageCircle className="mr-2 h-4 md:h-5 w-4 md:w-5" />
@@ -455,7 +479,7 @@ export default function Home() {
               Bergabunglah dengan ribuan pria Indonesia yang sudah merasakan manfaatnya!
             </p>
             <Button 
-              onClick={() => window.open(whatsappUrl, '_blank')}
+              onClick={() => handleWhatsAppClick('After Testimonials')}
               size="lg"
               className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-red-500/50"
             >
@@ -519,7 +543,7 @@ export default function Home() {
           </p>
           
           <Button 
-            onClick={() => window.open(whatsappUrl, '_blank')}
+            onClick={() => handleWhatsAppClick('Final CTA')}
             size="lg"
             className="bg-white text-red-600 hover:bg-gray-100 font-bold px-12 py-6 text-xl rounded-full shadow-2xl transform hover:scale-105 transition-all"
           >
@@ -554,7 +578,7 @@ export default function Home() {
       {/* Mobile Floating CTA */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-t from-black via-black to-transparent">
         <Button 
-          onClick={() => window.open(whatsappUrl, '_blank')}
+          onClick={() => handleWhatsAppClick('Mobile Floating')}
           className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-full shadow-2xl shadow-red-500/50 animate-pulse"
         >
           <MessageCircle className="mr-2 h-5 w-5" />
