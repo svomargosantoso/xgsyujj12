@@ -114,10 +114,10 @@ export default function Home() {
               <a href="#testimoni" className="hover:text-red-500 transition-colors">Testimoni</a>
               <Button 
                 onClick={() => handleWhatsAppClick('Header Desktop')}
-                className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-6 py-2 rounded-full shadow-lg shadow-red-500/50"
+                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-6 py-2 rounded-full shadow-lg shadow-green-500/50"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
-                PESAN SEKARANG
+                KONSULTASI GRATIS
               </Button>
             </nav>
 
@@ -163,10 +163,10 @@ export default function Home() {
               </a>
               <Button 
                 onClick={() => handleWhatsAppClick('Header Mobile')}
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 rounded-full"
+                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 rounded-full shadow-lg shadow-green-500/50"
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
-                PESAN SEKARANG
+                KONSULTASI GRATIS
               </Button>
             </div>
           )}
@@ -238,10 +238,10 @@ export default function Home() {
             <Button 
               onClick={() => handleWhatsAppClick('Hero Section')}
               size="lg"
-              className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-red-500/50 transform hover:scale-105 transition-all"
+              className="w-full sm:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-green-500/50 transform hover:scale-105 transition-all"
             >
               <MessageCircle className="mr-2 md:mr-3 h-5 md:h-6 w-5 md:w-6" />
-              CLAIM VOUCHER FREE ONGKIR
+              KONSULTASI GRATIS VIA WHATSAPP
             </Button>
           </div>
 
@@ -292,9 +292,12 @@ export default function Home() {
                   <p className="text-gray-400 mb-4 text-sm md:text-base">10 Sachet Premium</p>
                   
                   <div className="mb-4">
-                    <Badge className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg animate-pulse">
-                      🎁 CLAIM VOUCHER FREE ONGKIR
-                    </Badge>
+                    <Button
+                      onClick={() => handleWhatsAppClick('Badge - 1 Box')}
+                      className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-bold animate-pulse cursor-pointer border-0 rounded-full"
+                    >
+                      🎁 GRATIS ONGKIR + BONUS KONSULTASI
+                    </Button>
                   </div>
                 </div>
 
@@ -305,7 +308,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="font-bold text-green-500">Claim Voucher Free Ongkir Sekarang!</span>
+                    <span className="font-bold text-green-500">Konsultasi Gratis Via WhatsApp!</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -315,10 +318,10 @@ export default function Home() {
 
                 <Button 
                   onClick={() => handleWhatsAppClick('Product - 1 Box')}
-                  className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-3 md:py-4 rounded-full text-sm md:text-base"
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 md:py-4 rounded-full text-sm md:text-base shadow-lg shadow-green-500/50"
                 >
                   <MessageCircle className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  PESAN 1 BOX
+                  KONSULTASI GRATIS VIA WHATSAPP
                 </Button>
               </CardContent>
             </Card>
@@ -339,9 +342,12 @@ export default function Home() {
                   <p className="text-gray-400 mb-4 text-sm md:text-base">Cocok untuk Pemula</p>
                   
                   <div className="mb-4">
-                    <Badge className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg animate-pulse">
-                      🎁 CLAIM VOUCHER FREE ONGKIR
-                    </Badge>
+                    <Button
+                      onClick={() => handleWhatsAppClick('Badge - 5 Sachet')}
+                      className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-4 md:px-6 py-2 md:py-3 text-sm md:text-lg font-bold animate-pulse cursor-pointer border-0 rounded-full"
+                    >
+                      🎁 GRATIS ONGKIR + BONUS KONSULTASI
+                    </Button>
                   </div>
                 </div>
 
@@ -352,7 +358,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span className="font-bold text-green-500">Claim Voucher Free Ongkir Sekarang!</span>
+                    <span className="font-bold text-green-500">Konsultasi Gratis Via WhatsApp!</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -366,10 +372,10 @@ export default function Home() {
 
                 <Button 
                   onClick={() => handleWhatsAppClick('Product - 5 Sachet')}
-                  className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-3 md:py-4 rounded-full shadow-lg shadow-yellow-500/50 text-sm md:text-base"
+                  className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 md:py-4 rounded-full shadow-lg shadow-green-500/50 text-sm md:text-base"
                 >
                   <MessageCircle className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  PESAN 5 SACHET
+                  KONSULTASI GRATIS VIA WHATSAPP
                 </Button>
               </CardContent>
             </Card>
@@ -481,10 +487,10 @@ export default function Home() {
             <Button 
               onClick={() => handleWhatsAppClick('After Testimonials')}
               size="lg"
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-red-500/50"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-green-500/50"
             >
               <MessageCircle className="mr-2 md:mr-3 h-5 md:h-6 w-5 md:w-6" />
-              CLAIM VOUCHER FREE ONGKIR
+              KONSULTASI GRATIS VIA WHATSAPP
             </Button>
           </div>
         </div>
@@ -539,16 +545,16 @@ export default function Home() {
             Siap Tingkatkan Stamina Anda?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Jangan lewatkan promo spesial hari ini! Claim voucher free ongkir sekarang juga
+            Konsultasi gratis dengan tim kami sekarang juga! Dapatkan rekomendasi terbaik untuk kebutuhan Anda
           </p>
           
           <Button 
             onClick={() => handleWhatsAppClick('Final CTA')}
             size="lg"
-            className="bg-white text-red-600 hover:bg-gray-100 font-bold px-12 py-6 text-xl rounded-full shadow-2xl transform hover:scale-105 transition-all"
+            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-12 py-6 text-xl rounded-full shadow-2xl shadow-green-500/50 transform hover:scale-105 transition-all"
           >
             <MessageCircle className="mr-3 h-6 w-6" />
-            PESAN SEKARANG JUGA!
+            KONSULTASI GRATIS VIA WHATSAPP
           </Button>
 
           <p className="mt-6 text-sm">
@@ -579,10 +585,10 @@ export default function Home() {
       <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-t from-black via-black to-transparent">
         <Button 
           onClick={() => handleWhatsAppClick('Mobile Floating')}
-          className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 rounded-full shadow-2xl shadow-red-500/50 animate-pulse"
+          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 rounded-full shadow-2xl shadow-green-500/50 animate-pulse"
         >
           <MessageCircle className="mr-2 h-5 w-5" />
-          CLAIM VOUCHER FREE ONGKIR
+          KONSULTASI GRATIS VIA WHATSAPP
         </Button>
       </div>
     </div>
