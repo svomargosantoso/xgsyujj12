@@ -497,16 +497,16 @@ export default function Home() {
       </section>
 
       {/* Certificates Section */}
-      <section id="sertifikat" className="py-20 bg-black">
+      <section id="sertifikat" className="py-12 md:py-20 bg-black">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 px-2">
               <span className="text-red-500">100% Legal</span> & Aman
             </h2>
-            <p className="text-gray-400 text-lg">Terdaftar resmi BPOM dan bersertifikat Halal MUI</p>
+            <p className="text-gray-400 text-base md:text-lg">Terdaftar resmi BPOM dan bersertifikat Halal MUI</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             <Card className="bg-zinc-900 border-zinc-800 overflow-hidden">
               <CardContent className="p-0">
                 <img 
@@ -514,9 +514,9 @@ export default function Home() {
                   alt="Sertifikat BPOM Coffiy" 
                   className="w-full h-auto"
                 />
-                <div className="p-6 text-center">
-                  <Badge className="bg-green-600 mb-2">✓ BPOM VERIFIED</Badge>
-                  <p className="text-sm text-gray-400">No. BPOM: MD 867031211059</p>
+                <div className="p-4 md:p-6 text-center">
+                  <Badge className="bg-green-600 mb-2 text-xs md:text-sm">✓ BPOM VERIFIED</Badge>
+                  <p className="text-xs md:text-sm text-gray-400">No. BPOM: MD 867031211059</p>
                 </div>
               </CardContent>
             </Card>
@@ -528,9 +528,9 @@ export default function Home() {
                   alt="Sertifikat Halal MUI Coffiy" 
                   className="w-full h-auto"
                 />
-                <div className="p-6 text-center">
-                  <Badge className="bg-green-600 mb-2">✓ HALAL MUI</Badge>
-                  <p className="text-sm text-gray-400">No. Sertifikat: 00150099991220</p>
+                <div className="p-4 md:p-6 text-center">
+                  <Badge className="bg-green-600 mb-2 text-xs md:text-sm">✓ HALAL MUI</Badge>
+                  <p className="text-xs md:text-sm text-gray-400">No. Sertifikat: 00150099991220</p>
                 </div>
               </CardContent>
             </Card>
@@ -539,55 +539,55 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600 to-red-700">
+      <section className="py-12 md:py-20 bg-gradient-to-r from-red-600 to-red-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Siap Tingkatkan Stamina Anda?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-base md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto">
             Konsultasi gratis dengan tim kami sekarang juga! Dapatkan rekomendasi terbaik untuk kebutuhan Anda
           </p>
           
           <Button 
             onClick={() => handleWhatsAppClick('Final CTA')}
             size="lg"
-            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-12 py-6 text-xl rounded-full shadow-2xl shadow-green-500/50 transform hover:scale-105 transition-all"
+            className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-8 md:px-12 py-3 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-green-500/50 transform hover:scale-105 transition-all"
           >
-            <MessageCircle className="mr-3 h-6 w-6" />
+            <MessageCircle className="mr-2 md:mr-3 h-5 md:h-6 w-5 md:w-6" />
             KONSULTASI GRATIS VIA WHATSAPP
           </Button>
 
-          <p className="mt-6 text-sm">
-            <Clock className="inline h-4 w-4 mr-1" />
+          <p className="mt-4 md:mt-6 text-xs md:text-sm">
+            <Clock className="inline h-3 md:h-4 w-3 md:w-4 mr-1" />
             Promo berakhir dalam {String(timeLeft.hours).padStart(2, '0')}:{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}
           </p>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-12 border-t border-zinc-800">
+      <footer className="bg-black py-8 md:py-12 border-t border-zinc-800">
         <div className="container mx-auto px-4 text-center">
           <img 
             src="/coffiy-logo-kopi-stamina-pria.png" 
             alt="Coffiy Logo" 
-            className="h-12 mx-auto mb-4"
+            className="h-10 md:h-12 mx-auto mb-3 md:mb-4"
           />
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-400 mb-3 md:mb-4 text-sm md:text-base">
             Coffiy - Kopi Stamina Pria Dewasa Premium
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-xs md:text-sm text-gray-500">
             © 2024 Coffiy. All rights reserved. | BPOM & Halal MUI Certified
           </p>
         </div>
       </footer>
 
       {/* Mobile Floating CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-gradient-to-t from-black via-black to-transparent">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 p-3 bg-gradient-to-t from-black via-black to-transparent">
         <Button 
           onClick={() => handleWhatsAppClick('Mobile Floating')}
-          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 rounded-full shadow-2xl shadow-green-500/50 animate-pulse"
+          className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 text-sm rounded-full shadow-2xl shadow-green-500/50 animate-pulse"
         >
-          <MessageCircle className="mr-2 h-5 w-5" />
+          <MessageCircle className="mr-2 h-4 w-4" />
           KONSULTASI GRATIS VIA WHATSAPP
         </Button>
       </div>
