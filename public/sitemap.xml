@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://coffiystaminapria.vercel.app/</loc>
-    <lastmod>2024-02-21</lastmod>
+    <loc>https://coffiystamina.vercel.app/</loc>
+    <lastmod>2024-02-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://coffiystamina.vercel.app/faq</loc>
+    <lastmod>2024-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffiystamina.vercel.app/blog</loc>
+    <lastmod>2024-02-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://coffiystamina.vercel.app/blog/manfaat-kopi-untuk-stamina-pria</loc>
+    <lastmod>2024-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffiystamina.vercel.app/blog/tips-meningkatkan-vitalitas-pria-secara-alami</loc>
+    <lastmod>2024-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://coffiystamina.vercel.app/blog/perbedaan-kopi-biasa-vs-kopi-stamina</loc>
+    <lastmod>2024-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
