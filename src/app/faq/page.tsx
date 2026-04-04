@@ -38,7 +38,7 @@ export default function FAQPage() {
     },
     {
       question: "Berapa lama efek Coffiy terasa?",
-      answer: "Efek energi dan stamina dapat dirasakan dalam 30-60 menit setelah konsumsi. Untuk hasil optimal dan jangka panjang, konsumsi rutin selama 7-14 hari."
+      answer: "Efek energi dan stamina dapat dirasakan dalam 60-120 menit setelah konsumsi. Untuk hasil optimal dan jangka panjang, konsumsi rutin selama 7-14 hari."
     },
     {
       question: "Siapa yang boleh mengonsumsi Coffiy?",
@@ -79,25 +79,69 @@ export default function FAQPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-950 text-white overflow-x-hidden">
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Beranda",
+                "item": "https://coffiystamina.vercel.app"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "FAQ",
+                "item": "https://coffiystamina.vercel.app/faq"
+              }
+            ]
+          })
+        }}
+      />
+      
+      {/* JSON-LD Schema Markup for FAQ */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqs.map(faq => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+              }
+            }))
+          })
+        }}
+      />
+      
       {/* Header */}
       <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-red-900/20">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-2 md:space-x-3">
               <img 
                 src="/coffiy-logo-kopi-stamina-pria.png" 
                 alt="Coffiy Logo" 
-                className="h-12 w-auto"
+                className="h-10 md:h-12 w-auto"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+              <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
                 COFFIY
               </span>
             </Link>
 
             <Link href="/">
-              <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800">
-                <Home className="mr-2 h-4 w-4" />
+              <Button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-xs md:text-sm px-3 md:px-4 py-2">
+                <Home className="mr-1 md:mr-2 h-3 md:h-4 w-3 md:w-4" />
                 Beranda
               </Button>
             </Link>
@@ -106,19 +150,19 @@ export default function FAQPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-12 md:py-20">
+      <section className="py-8 md:py-12 lg:py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 md:mb-4 lg:mb-6 leading-tight">
               Pertanyaan yang Sering Ditanyakan
             </h1>
-            <p className="text-base md:text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-sm md:text-base lg:text-xl text-gray-400 max-w-3xl mx-auto px-2">
               Temukan jawaban untuk pertanyaan umum tentang Coffiy - Kopi Stamina Pria Dewasa Premium
             </p>
           </div>
 
           {/* FAQ List */}
-          <div className="max-w-4xl mx-auto space-y-4">
+          <div className="max-w-4xl mx-auto space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
               <Card 
                 key={index}
@@ -127,21 +171,21 @@ export default function FAQPage() {
                 <CardContent className="p-0">
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full text-left p-4 md:p-6 flex items-center justify-between"
+                    className="w-full text-left p-3 md:p-4 lg:p-6 flex items-start justify-between gap-3"
                   >
-                    <h3 className="text-base md:text-lg font-bold pr-4">
+                    <h3 className="text-sm md:text-base lg:text-lg font-bold pr-2 leading-snug">
                       {faq.question}
                     </h3>
                     {openIndex === index ? (
-                      <ChevronUp className="h-5 w-5 text-red-500 flex-shrink-0" />
+                      <ChevronUp className="h-4 md:h-5 w-4 md:w-5 text-red-500 flex-shrink-0 mt-0.5" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0" />
+                      <ChevronDown className="h-4 md:h-5 w-4 md:w-5 text-gray-400 flex-shrink-0 mt-0.5" />
                     )}
                   </button>
                   
                   {openIndex === index && (
-                    <div className="px-4 md:px-6 pb-4 md:pb-6">
-                      <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                    <div className="px-3 md:px-4 lg:px-6 pb-3 md:pb-4 lg:pb-6">
+                      <p className="text-xs md:text-sm lg:text-base text-gray-300 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
@@ -152,34 +196,35 @@ export default function FAQPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-12 md:mt-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <div className="text-center mt-8 md:mt-12 lg:mt-16">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4">
               Masih Ada Pertanyaan?
             </h2>
-            <p className="text-gray-400 mb-6 md:mb-8 text-sm md:text-base">
+            <p className="text-gray-400 mb-4 md:mb-6 lg:mb-8 text-xs md:text-sm lg:text-base px-4">
               Tim kami siap membantu Anda! Konsultasi gratis via WhatsApp
             </p>
             <Button 
               onClick={() => window.open(whatsappUrl, '_blank')}
               size="lg"
-              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-8 md:px-12 py-4 md:py-6 text-base md:text-xl rounded-full shadow-2xl shadow-green-500/50"
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-sm md:text-base lg:text-xl rounded-full shadow-2xl shadow-green-500/50"
             >
-              <MessageCircle className="mr-2 md:mr-3 h-5 md:h-6 w-5 md:w-6" />
-              KONSULTASI GRATIS VIA WHATSAPP
+              <MessageCircle className="mr-2 md:mr-3 h-4 md:h-5 lg:h-6 w-4 md:w-5 lg:w-6" />
+              <span className="hidden sm:inline">KONSULTASI GRATIS VIA WHATSAPP</span>
+              <span className="sm:hidden">KONSULTASI GRATIS</span>
             </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-8 md:py-12 border-t border-zinc-800">
+      <footer className="bg-black py-6 md:py-8 lg:py-12 border-t border-zinc-800">
         <div className="container mx-auto px-4 text-center">
           <img 
             src="/coffiy-logo-kopi-stamina-pria.png" 
             alt="Coffiy Logo" 
-            className="h-10 md:h-12 mx-auto mb-3 md:mb-4"
+            className="h-8 md:h-10 lg:h-12 mx-auto mb-2 md:mb-3 lg:mb-4"
           />
-          <p className="text-gray-400 mb-3 md:mb-4 text-sm md:text-base">
+          <p className="text-gray-400 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">
             Coffiy - Kopi Stamina Pria Dewasa Premium
           </p>
           <p className="text-xs md:text-sm text-gray-500">

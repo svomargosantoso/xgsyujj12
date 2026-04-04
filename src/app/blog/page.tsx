@@ -9,6 +9,25 @@ import Image from 'next/image';
 
 export default function BlogPage() {
   const articles = [
+    { slug: 'cara-mengatasi-ejakulasi-dini-secara-alami', title: 'Cara Mengatasi Ejakulasi Dini Secara Alami Tanpa Obat Kimia', excerpt: 'Panduan lengkap cara mengatasi ejakulasi dini secara alami. Pelajari penyebab, teknik, dan solusi herbal yang aman dan terbukti efektif.', image: '/coffiy-stamina-kopi-penambah-stamina-pria-dewasa-halal-bpom.png', date: '26 Februari 2024', readTime: '8 menit', category: 'High Intent' },
+    { slug: 'cara-tahan-lama-saat-berhubungan', title: 'Cara Tahan Lama Saat Berhubungan (Terbukti Efektif)', excerpt: 'Teknik dan cara tahan lama yang terbukti efektif secara alami. Panduan praktis untuk pria dewasa meningkatkan performa dan kepercayaan diri.', image: '/coffiy-5s.png', date: '27 Februari 2024', readTime: '7 menit', category: 'High Intent' },
+    { slug: 'penyebab-pria-cepat-keluar-dan-cara-mengatasinya', title: 'Penyebab Pria Cepat Keluar dan Cara Mengatasinya', excerpt: 'Kenali 7 penyebab utama pria cepat keluar dan cara mengatasinya secara alami. Solusi praktis dan aman untuk pria dewasa.', image: '/coffiy-box.png', date: '28 Februari 2024', readTime: '6 menit', category: 'High Intent' },
+    { slug: 'cara-meningkatkan-stamina-pria-usia-30', title: 'Cara Meningkatkan Stamina Pria Usia 30+: Panduan Khusus', excerpt: 'Panduan lengkap cara meningkatkan stamina pria usia 30 tahun ke atas. Strategi nutrisi, olahraga, dan suplemen alami yang terbukti efektif.', image: '/coffiy-stamina-kopi-penambah-stamina-pria-dewasa-halal-bpom.png', date: '29 Februari 2024', readTime: '8 menit', category: 'High Intent' },
+    { slug: 'solusi-alami-vitalitas-pria-menurun', title: 'Solusi Alami untuk Vitalitas Pria yang Menurun', excerpt: 'Temukan solusi alami terbaik untuk mengatasi vitalitas pria yang menurun. Panduan lengkap dari herbal, nutrisi, olahraga, hingga suplemen aman.', image: '/coffiy-1s.png', date: '1 Maret 2024', readTime: '7 menit', category: 'Solusi' },
+    { slug: 'kenapa-pria-dulu-kuat-sekarang-cepat-selesai', title: 'Kenapa Pria yang Dulu Kuat Sekarang Cepat Selesai?', excerpt: 'Penjelasan ilmiah mengapa pria yang dulu kuat kini cepat selesai. Penyebab tersembunyi dan solusi nyata yang bisa mulai diterapkan hari ini.', image: '/coffiy-background-grafik-stamina-pria-merah.png', date: '2 Maret 2024', readTime: '6 menit', category: 'Emotional' },
+    { slug: 'tanda-stamina-pria-mulai-menurun', title: '7 Tanda-Tanda Stamina Pria Mulai Menurun yang Sering Diabaikan', excerpt: 'Kenali 7 tanda stamina pria mulai menurun yang sering diabaikan. Deteksi dini dan ambil tindakan sebelum kondisi semakin memburuk.', image: '/coffiy-stamina-kopi-penambah-stamina-pria-dewasa-halal-bpom.png', date: '3 Maret 2024', readTime: '5 menit', category: 'Emotional' },
+    { slug: 'masalah-pria-yang-jarang-dibahas', title: 'Masalah yang Jarang Dibahas Pria… Tapi Sering Terjadi', excerpt: 'Ada masalah yang dialami jutaan pria tapi jarang dibicarakan. Saatnya kita bahas secara terbuka — karena diam bukan solusi.', image: '/coffiy-5s-alt.png', date: '6 Maret 2024', readTime: '6 menit', category: 'Emotional' },
+    { slug: 'review-coffiy-kopi-stamina-pria', title: 'Review Coffiy: Benarkah Bisa Meningkatkan Stamina Pria?', excerpt: 'Review jujur dan lengkap tentang Coffiy — kopi stamina pria yang diklaim bisa meningkatkan energi dan vitalitas pria dewasa.', image: '/coffiy-stamina-kopi-penambah-stamina-pria-dewasa-halal-bpom.png', date: '4 Maret 2024', readTime: '8 menit', category: 'Review' },
+    { slug: 'pengalaman-pria-40-tahun-mengatasi-vitalitas', title: 'Pengalaman Pria 40 Tahun Mengatasi Masalah Vitalitas dengan Coffiy', excerpt: 'Kisah nyata perjalanan 30 hari yang mengubah segalanya — dari ragu-ragu hingga merasakan perbedaan nyata.', image: '/coffiy-box.png', date: '5 Maret 2024', readTime: '7 menit', category: 'Review' },
+    {
+      slug: 'cara-mengatasi-stamina-pria-menurun',
+      title: 'Cara Mengatasi Stamina Pria yang Menurun: Panduan Lengkap 2024',
+      excerpt: 'Penyebab dan cara mengatasi stamina pria yang menurun secara alami. Panduan lengkap dari pola makan, olahraga, hingga suplemen herbal yang aman dan terbukti efektif.',
+      image: '/coffiy-stamina-kopi-penambah-stamina-pria-dewasa-halal-bpom.png',
+      date: '25 Februari 2024',
+      readTime: '7 menit',
+      category: 'Kesehatan'
+    },
     {
       slug: 'manfaat-kopi-untuk-stamina-pria',
       title: 'Manfaat Kopi untuk Stamina Pria: Rahasia Energi Maksimal',
