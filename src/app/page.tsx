@@ -256,10 +256,6 @@ export default function Home() {
               <span>Halal MUI</span>
             </div>
             <div className="flex items-center gap-1 md:gap-2">
-              <CheckCircle2 className="h-4 md:h-5 w-4 md:w-5 text-green-500" />
-              <span>100% Original</span>
-            </div>
-            <div className="flex items-center gap-1 md:gap-2">
               <TrendingUp className="h-4 md:h-5 w-4 md:w-5 text-green-500" />
               <span>10.000+ Pria Puas</span>
             </div>
@@ -310,10 +306,6 @@ export default function Home() {
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span className="font-bold text-green-500">Konsultasi Gratis Via WhatsApp!</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span>Garansi 100% Original</span>
-                  </li>
                 </ul>
 
                 <Button 
@@ -359,10 +351,6 @@ export default function Home() {
                   <li className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
                     <span className="font-bold text-green-500">Konsultasi Gratis Via WhatsApp!</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
-                    <span>Garansi 100% Original</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Star className="h-5 w-5 text-yellow-500 flex-shrink-0" />

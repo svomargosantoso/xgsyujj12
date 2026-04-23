@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Coffiy - Kopi Stamina Pria Dewasa",
     description: "Kopi stamina pria dewasa premium untuk penambah energi dan vitalitas pria modern. Coffee for men terbaik di Indonesia.",
-    url: "https://coffiystaminapria.vercel.app",
+    url: "https://coffiystamina.vercel.app",
     siteName: "Coffiy",
     type: "website",
   },
